@@ -11,6 +11,7 @@
 #import "NSError+Git.h"
 #import "GTFilterSource.h"
 
+#import "git2/deprecated.h"
 #import "git2/errors.h"
 #import "git2/sys/filter.h"
 
@@ -56,8 +57,9 @@ static NSMutableDictionary *GTFiltersGitFilterToRegisteredFilters = nil;
 
 	_filter.version = GIT_FILTER_VERSION;
 	_filter.attributes = attributes.UTF8String;
+#if XXXX
 	_filter.apply = &GTFilterApply;
-
+#endif
 	_name = [name copy];
 	_applyBlock = [applyBlock copy];
 
@@ -102,6 +104,7 @@ static int GTFilterCheck(git_filter *filter, void **payload, const git_filter_so
 	return accept ? 0 : GIT_PASSTHROUGH;
 }
 
+#if XXX
 static int GTFilterApply(git_filter *filter, void **payload, git_buf *to, const git_buf *from, const git_filter_source *src) {
 	GTFilter *self = GTFiltersGitFilterToRegisteredFilters[[NSValue valueWithPointer:filter]];
 	NSData *fromData = [NSData dataWithBytesNoCopy:from->ptr length:from->size freeWhenDone:NO];
@@ -112,6 +115,7 @@ static int GTFilterApply(git_filter *filter, void **payload, git_buf *to, const 
 	git_buf_set(to, toData.bytes, toData.length);
 	return 0;
 }
+#endif
 
 static void GTFilterCleanup(git_filter *filter, void *payload) {
 	GTFilter *self = GTFiltersGitFilterToRegisteredFilters[[NSValue valueWithPointer:filter]];

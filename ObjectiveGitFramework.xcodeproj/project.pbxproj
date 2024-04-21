@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -94,22 +94,21 @@
 		4D9BCD25206D84B2003CD3CE /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9BCD23206D84AD003CD3CE /* libgit2.a */; };
 		4DB9711D2645CA3700D14944 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB970A32645C8BB00D14944 /* Quick.framework */; };
 		4DB9711F2645CA5200D14944 /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB971172645C8F300D14944 /* ZipArchive.framework */; };
-		4DB971202645CA5D00D14944 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB970AD2645C8BB00D14944 /* Quick.framework */; };
-		4DB971212645CA6600D14944 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB971062645C8F300D14944 /* Nimble.framework */; };
 		4DB971222645CA6D00D14944 /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB971152645C8F300D14944 /* ZipArchive.framework */; };
 		4DBA4A3217DA73CE006CD5F5 /* GTRemoteSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA4A3117DA73CE006CD5F5 /* GTRemoteSpec.m */; };
 		4DC55AE51AD859AD0032563C /* GTCheckoutOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC55AE31AD859AD0032563C /* GTCheckoutOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DC55AE61AD859AD0032563C /* GTCheckoutOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC55AE31AD859AD0032563C /* GTCheckoutOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DC55AE71AD859AD0032563C /* GTCheckoutOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC55AE41AD859AD0032563C /* GTCheckoutOptions.m */; };
 		4DC55AE81AD859AD0032563C /* GTCheckoutOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC55AE41AD859AD0032563C /* GTCheckoutOptions.m */; };
-		4DD769A92645D214007599B8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB971022645C8F300D14944 /* Nimble.framework */; };
 		4DD7422C25D3F8CB009D9A17 /* libgit2-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD7422B25D3F8CB009D9A17 /* libgit2-mac.a */; };
+		4DD769A92645D214007599B8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB971022645C8F300D14944 /* Nimble.framework */; };
 		4DFFB15B183AA8D600D1565E /* GTRepository+RemoteOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DFFB159183AA8D600D1565E /* GTRepository+RemoteOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DFFB15C183AA8D600D1565E /* GTRepository+RemoteOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFB15A183AA8D600D1565E /* GTRepository+RemoteOperations.m */; };
 		55C8055013861FE7004DCB0F /* GTObjectDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8054D13861F34004DCB0F /* GTObjectDatabase.m */; };
 		55C8057A13875578004DCB0F /* NSString+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8057313874CDF004DCB0F /* NSString+Git.m */; };
 		55C8057D13875C11004DCB0F /* NSData+Git.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6C2266131459E700992935 /* NSData+Git.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55C8057E13875C1B004DCB0F /* NSString+Git.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C8057213874CDF004DCB0F /* NSString+Git.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56D274AF2B5D67DD006F0BE9 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A502B8617D6892D00BAF4A5 /* libssh2.a */; };
 		5BE612881745EE3400266D8C /* GTTreeBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BE612861745EE3300266D8C /* GTTreeBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BE6128A1745EE3400266D8C /* GTTreeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE612871745EE3300266D8C /* GTTreeBuilder.m */; };
 		5BE612931745EEBC00266D8C /* GTTreeBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE612921745EEBC00266D8C /* GTTreeBuilderSpec.m */; };
@@ -423,62 +422,6 @@
 			remoteGlobalIDString = 64076CF51D6D7C2000E2B499;
 			remoteInfo = "QuickAfterSuite - macOSTests";
 		};
-		4DB970AC2645C8BB00D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5A5D117C19473F2100F6D13D;
-			remoteInfo = "Quick-iOS";
-		};
-		4DB970AE2645C8BB00D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5A5D118619473F2100F6D13D;
-			remoteInfo = "Quick - iOSTests";
-		};
-		4DB970B02645C8BB00D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DA9876B21A4C70EB0004AA17;
-			remoteInfo = "QuickFocused - iOSTests";
-		};
-		4DB970B22645C8BB00D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 64076D081D6D7CD600E2B499;
-			remoteInfo = "QuickAfterSuite - iOSTests";
-		};
-		4DB970B42645C8BB00D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F118CD51BDCA4AB005013A2;
-			remoteInfo = "Quick-tvOS";
-		};
-		4DB970B62645C8BB00D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F118CDE1BDCA4AB005013A2;
-			remoteInfo = "Quick - tvOSTests";
-		};
-		4DB970B82645C8BB00D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F118CF01BDCA4BB005013A2;
-			remoteInfo = "QuickFocused - tvOSTests";
-		};
-		4DB970BA2645C8BB00D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 64076D1A1D6D7CEA00E2B499;
-			remoteInfo = "QuickAfterSuite - tvOSTests";
-		};
 		4DB971012645C8F300D14944 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DB970F72645C8F300D14944 /* Nimble.xcodeproj */;
@@ -492,34 +435,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
 			remoteInfo = "Nimble-macOSTests";
-		};
-		4DB971052645C8F300D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970F72645C8F300D14944 /* Nimble.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F1A74291940169200FFFC47;
-			remoteInfo = "Nimble-iOS";
-		};
-		4DB971072645C8F300D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970F72645C8F300D14944 /* Nimble.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F1A74341940169200FFFC47;
-			remoteInfo = "Nimble-iOSTests";
-		};
-		4DB971092645C8F300D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970F72645C8F300D14944 /* Nimble.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F5DF1551BDCA0CE00C3A531;
-			remoteInfo = "Nimble-tvOS";
-		};
-		4DB9710B2645C8F300D14944 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970F72645C8F300D14944 /* Nimble.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F5DF15E1BDCA0CE00C3A531;
-			remoteInfo = "Nimble-tvOSTests";
 		};
 		4DB971142645C8F300D14944 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -569,20 +484,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = AFF75A231C37279600F450AC;
 			remoteInfo = "ZipArchive-Mac";
-		};
-		4DD769A32645D16B007599B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970912645C8BA00D14944 /* Quick.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A5D117B19473F2100F6D13D;
-			remoteInfo = "Quick-iOS";
-		};
-		4DD769A52645D16B007599B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DB970F72645C8F300D14944 /* Nimble.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F1A74281940169200FFFC47;
-			remoteInfo = "Nimble-iOS";
 		};
 		4DD769A72645D16B007599B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -718,7 +619,7 @@
 		5BE612921745EEBC00266D8C /* GTTreeBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTreeBuilderSpec.m; sourceTree = "<group>"; };
 		6A1F2FD317C6A8F3003DFADE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = External/build/lib/libcrypto.a; sourceTree = "<group>"; };
 		6A1F2FD417C6A8F3003DFADE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = External/build/lib/libssl.a; sourceTree = "<group>"; };
-		6A502B8617D6892D00BAF4A5 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = External/build/lib/libssh2.a; sourceTree = "<group>"; };
+		6A502B8617D6892D00BAF4A5 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = External/libssh2/build_arm/libssh2.a; sourceTree = "<group>"; };
 		6EEB519F199D62B9001D72C0 /* GTFetchHeadEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFetchHeadEntry.h; sourceTree = "<group>"; };
 		6EEB51A0199D62B9001D72C0 /* GTFetchHeadEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFetchHeadEntry.m; sourceTree = "<group>"; };
 		79262F0E13C697BE00A4B1EA /* git2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = git2; path = External/libgit2/include/git2; sourceTree = "<group>"; };
@@ -884,6 +785,7 @@
 				F8D6385D207AC75100D1FD32 /* libz.tbd in Frameworks */,
 				F8D6385C207AC74A00D1FD32 /* libiconv.tbd in Frameworks */,
 				4DD7422C25D3F8CB009D9A17 /* libgit2-mac.a in Frameworks */,
+				56D274AF2B5D67DD006F0BE9 /* libssh2.a in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -907,8 +809,6 @@
 			files = (
 				F84277BE207B104A008AB8E8 /* XCTest.framework in Frameworks */,
 				F879D83C1B4B7F7D002D5C07 /* ObjectiveGit.framework in Frameworks */,
-				4DB971202645CA5D00D14944 /* Quick.framework in Frameworks */,
-				4DB971212645CA6600D14944 /* Nimble.framework in Frameworks */,
 				4DB971222645CA6D00D14944 /* ZipArchive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1044,18 +944,10 @@
 			isa = PBXGroup;
 			children = (
 				4DB970A32645C8BB00D14944 /* Quick.framework */,
-				4DB970A52645C8BB00D14944 /* Quick - macOSTests.xctest */,
+				4DB970A52645C8BB00D14944 /* Quick - Tests.xctest */,
 				4DB970A72645C8BB00D14944 /* QuickIssue853RegressionTests.xctest */,
-				4DB970A92645C8BB00D14944 /* QuickFocused - macOSTests.xctest */,
-				4DB970AB2645C8BB00D14944 /* QuickAfterSuite - macOSTests.xctest */,
-				4DB970AD2645C8BB00D14944 /* Quick.framework */,
-				4DB970AF2645C8BB00D14944 /* Quick - iOSTests.xctest */,
-				4DB970B12645C8BB00D14944 /* QuickFocused - iOSTests.xctest */,
-				4DB970B32645C8BB00D14944 /* QuickAfterSuite - iOSTests.xctest */,
-				4DB970B52645C8BB00D14944 /* Quick.framework */,
-				4DB970B72645C8BB00D14944 /* Quick - tvOSTests.xctest */,
-				4DB970B92645C8BB00D14944 /* QuickFocused - tvOSTests.xctest */,
-				4DB970BB2645C8BB00D14944 /* QuickAfterSuite - tvOSTests.xctest */,
+				4DB970A92645C8BB00D14944 /* QuickFocused - Tests.xctest */,
+				4DB970AB2645C8BB00D14944 /* QuickAfterSuite - Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1065,10 +957,6 @@
 			children = (
 				4DB971022645C8F300D14944 /* Nimble.framework */,
 				4DB971042645C8F300D14944 /* NimbleTests.xctest */,
-				4DB971062645C8F300D14944 /* Nimble.framework */,
-				4DB971082645C8F300D14944 /* NimbleTests.xctest */,
-				4DB9710A2645C8F300D14944 /* Nimble.framework */,
-				4DB9710C2645C8F300D14944 /* NimbleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1526,8 +1414,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4DD769A42645D16B007599B8 /* PBXTargetDependency */,
-				4DD769A62645D16B007599B8 /* PBXTargetDependency */,
 				4DD769A82645D16B007599B8 /* PBXTargetDependency */,
 				F879D83E1B4B7F7D002D5C07 /* PBXTargetDependency */,
 			);
@@ -1544,7 +1430,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "GitHub, Inc";
 				TargetAttributes = {
 					88F05A6A16011E5400B7AD1D = {
@@ -1613,10 +1499,10 @@
 			remoteRef = 4DB970A22645C8BB00D14944 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4DB970A52645C8BB00D14944 /* Quick - macOSTests.xctest */ = {
+		4DB970A52645C8BB00D14944 /* Quick - Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Quick - macOSTests.xctest";
+			path = "Quick - Tests.xctest";
 			remoteRef = 4DB970A42645C8BB00D14944 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1627,74 +1513,18 @@
 			remoteRef = 4DB970A62645C8BB00D14944 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4DB970A92645C8BB00D14944 /* QuickFocused - macOSTests.xctest */ = {
+		4DB970A92645C8BB00D14944 /* QuickFocused - Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "QuickFocused - macOSTests.xctest";
+			path = "QuickFocused - Tests.xctest";
 			remoteRef = 4DB970A82645C8BB00D14944 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4DB970AB2645C8BB00D14944 /* QuickAfterSuite - macOSTests.xctest */ = {
+		4DB970AB2645C8BB00D14944 /* QuickAfterSuite - Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "QuickAfterSuite - macOSTests.xctest";
+			path = "QuickAfterSuite - Tests.xctest";
 			remoteRef = 4DB970AA2645C8BB00D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB970AD2645C8BB00D14944 /* Quick.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Quick.framework;
-			remoteRef = 4DB970AC2645C8BB00D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB970AF2645C8BB00D14944 /* Quick - iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Quick - iOSTests.xctest";
-			remoteRef = 4DB970AE2645C8BB00D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB970B12645C8BB00D14944 /* QuickFocused - iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "QuickFocused - iOSTests.xctest";
-			remoteRef = 4DB970B02645C8BB00D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB970B32645C8BB00D14944 /* QuickAfterSuite - iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "QuickAfterSuite - iOSTests.xctest";
-			remoteRef = 4DB970B22645C8BB00D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB970B52645C8BB00D14944 /* Quick.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Quick.framework;
-			remoteRef = 4DB970B42645C8BB00D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB970B72645C8BB00D14944 /* Quick - tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Quick - tvOSTests.xctest";
-			remoteRef = 4DB970B62645C8BB00D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB970B92645C8BB00D14944 /* QuickFocused - tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "QuickFocused - tvOSTests.xctest";
-			remoteRef = 4DB970B82645C8BB00D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB970BB2645C8BB00D14944 /* QuickAfterSuite - tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "QuickAfterSuite - tvOSTests.xctest";
-			remoteRef = 4DB970BA2645C8BB00D14944 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		4DB971022645C8F300D14944 /* Nimble.framework */ = {
@@ -1709,34 +1539,6 @@
 			fileType = wrapper.cfbundle;
 			path = NimbleTests.xctest;
 			remoteRef = 4DB971032645C8F300D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB971062645C8F300D14944 /* Nimble.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Nimble.framework;
-			remoteRef = 4DB971052645C8F300D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB971082645C8F300D14944 /* NimbleTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = NimbleTests.xctest;
-			remoteRef = 4DB971072645C8F300D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB9710A2645C8F300D14944 /* Nimble.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Nimble.framework;
-			remoteRef = 4DB971092645C8F300D14944 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4DB9710C2645C8F300D14944 /* NimbleTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = NimbleTests.xctest;
-			remoteRef = 4DB9710B2645C8F300D14944 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		4DB971152645C8F300D14944 /* ZipArchive.framework */ = {
@@ -1808,7 +1610,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./script/repackage-dylibs.rb";
+			shellScript = "#./script/repackage-dylibs.rb\n";
 		};
 		6A28265317C69CB400C6A948 /* OpenSSL-iOS */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1836,11 +1638,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = script/update_libssh2_ios;
+			shellScript = "script/update_libssh2_ios\n";
 		};
 		D0A330F116027F2300A616FA /* libgit2 */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -1850,7 +1653,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = script/update_libgit2;
+			shellScript = "script/update_libgit2\n";
 		};
 		D0A330F616027F3B00A616FA /* libgit2-iOS */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2107,16 +1910,6 @@
 			name = "ZipArchive-Mac";
 			targetProxy = 4DD769882645D15D007599B8 /* PBXContainerItemProxy */;
 		};
-		4DD769A42645D16B007599B8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Quick-iOS";
-			targetProxy = 4DD769A32645D16B007599B8 /* PBXContainerItemProxy */;
-		};
-		4DD769A62645D16B007599B8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Nimble-iOS";
-			targetProxy = 4DD769A52645D16B007599B8 /* PBXContainerItemProxy */;
-		};
 		4DD769A82645D16B007599B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ZipArchive-iOS";
@@ -2155,6 +1948,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DB97075264596AE00D14944 /* macOS-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -2164,14 +1958,12 @@
 					/usr/local/opt/openssl/lib,
 					"$(PROJECT_DIR)/External/build/lib",
 					"$(PROJECT_DIR)/External",
+					"$(PROJECT_DIR)/External/libssh2/build_arm",
 				);
 				MODULEMAP_FILE = ObjectiveGit.modulemap;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"External/libgit2-mac.a",
-					/usr/local/lib/libssh2.a,
-					"-lcrypto",
-					"-lssl",
 					"-lcurl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libgit2.$(PRODUCT_NAME:rfc1034identifier)";
@@ -2184,6 +1976,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DB97075264596AE00D14944 /* macOS-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -2193,14 +1986,12 @@
 					/usr/local/opt/openssl/lib,
 					"$(PROJECT_DIR)/External/build/lib",
 					"$(PROJECT_DIR)/External",
+					"$(PROJECT_DIR)/External/libssh2/build_arm",
 				);
 				MODULEMAP_FILE = ObjectiveGit.modulemap;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"External/libgit2-mac.a",
-					/usr/local/lib/libssh2.a,
-					"-lcrypto",
-					"-lssl",
 					"-lcurl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libgit2.$(PRODUCT_NAME:rfc1034identifier)";
@@ -2422,6 +2213,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DB97075264596AE00D14944 /* macOS-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -2431,14 +2223,12 @@
 					/usr/local/opt/openssl/lib,
 					"$(PROJECT_DIR)/External/build/lib",
 					"$(PROJECT_DIR)/External",
+					"$(PROJECT_DIR)/External/libssh2/build_arm",
 				);
 				MODULEMAP_FILE = ObjectiveGit.modulemap;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"External/libgit2-mac.a",
-					/usr/local/lib/libssh2.a,
-					"-lcrypto",
-					"-lssl",
 					"-lcurl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libgit2.$(PRODUCT_NAME:rfc1034identifier)";
@@ -2641,6 +2431,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4DB97075264596AE00D14944 /* macOS-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -2650,14 +2441,12 @@
 					/usr/local/opt/openssl/lib,
 					"$(PROJECT_DIR)/External/build/lib",
 					"$(PROJECT_DIR)/External",
+					"$(PROJECT_DIR)/External/libssh2/build_arm",
 				);
 				MODULEMAP_FILE = ObjectiveGit.modulemap;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"External/libgit2-mac.a",
-					/usr/local/lib/libssh2.a,
-					"-lcrypto",
-					"-lssl",
 					"-lcurl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libgit2.$(PRODUCT_NAME:rfc1034identifier)";

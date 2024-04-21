@@ -6,7 +6,8 @@
 #import "NSError+Git.h"
 
 #import "git2/errors.h"
-#import "git2/deprecated.h"
+
+extern int git_buf_is_binary(const git_buf *str);
 
 @implementation NSData (Git)
 
@@ -35,23 +36,24 @@
 
 	if (buffer->size == 0) return [self data];
 
+#if XXX
 	// Ensure that the buffer is actually allocated dynamically, not pointing to
 	// some data which may disappear.
 	if (git_buf_grow(buffer, 0) != GIT_OK) return nil;
+#endif
 
 	NSData *data = [self dataWithBytesNoCopy:buffer->ptr length:buffer->size freeWhenDone:YES];
-	*buffer = (git_buf)GIT_BUF_INIT_CONST(0, NULL);
+	*buffer = (git_buf){NULL};
 
 	return data;
 }
 
 - (git_buf)git_buf {
-	return (git_buf)GIT_BUF_INIT_CONST((void *)self.bytes, self.length);
+	return (git_buf){(void *)self.bytes, self.length};
 }
 
 - (BOOL)git_containsNUL {
-	git_buf buffer = self.git_buf;
-	return git_buf_contains_nul(&buffer) > 0;
+	return memchr((void *)self.bytes, '\0', self.length);
 }
 
 - (BOOL)git_isBinary {

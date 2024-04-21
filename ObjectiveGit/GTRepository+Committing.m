@@ -32,7 +32,7 @@
 	NSParameterAssert(author != nil);
 	NSParameterAssert(committer != nil);
 
-	const git_commit **parentCommits = NULL;
+	git_commit **parentCommits = NULL;
 	if (parents.count > 0) {
 		parentCommits = calloc(parents.count, sizeof(git_commit *));
 		for (NSUInteger i = 0; i < parents.count; i++){

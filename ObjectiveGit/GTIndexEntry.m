@@ -34,7 +34,9 @@
 #import "GTRepository.h"
 #import "GTIndex.h"
 
+#import "git2/deprecated.h"
 #import "git2.h"
+#import "git2/index.h"
 
 @interface GTIndexEntry ()
 @property (nonatomic, assign, readonly) const git_index_entry *git_index_entry;
@@ -84,10 +86,11 @@
 }
 
 - (BOOL)isStaged {
-	return (self.git_index_entry->flags & GIT_IDXENTRY_STAGEMASK) >> GIT_IDXENTRY_STAGESHIFT;
+	return (self.git_index_entry->flags & GIT_INDEX_ENTRY_STAGEMASK) >> GIT_INDEX_ENTRY_STAGESHIFT;
 }
 
 - (GTIndexEntryStatus)status {
+#if XXX
 	if ((self.flags & (GIT_IDXENTRY_UPDATE << 16)) != 0) {
 		return GTIndexEntryStatusUpdated;
 	} else if ((self.flags & (GIT_IDXENTRY_UPTODATE << 16)) != 0) {
@@ -99,7 +102,7 @@
 	} else if ((self.flags & (GIT_IDXENTRY_REMOVE << 16)) != 0) {
 		return GTIndexEntryStatusRemoved;
 	}
-
+#endif
 	return GTIndexEntryStatusUpToDate;
 }
 

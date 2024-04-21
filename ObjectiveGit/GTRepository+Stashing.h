@@ -12,7 +12,7 @@
 
 /// Flags for -stashChangesWithMessage:flags:error:.
 /// Those can be ORed together. See git_stash_flags for additional information.
-typedef NS_OPTIONS(NSInteger, GTRepositoryStashFlag) {
+typedef NS_OPTIONS(uint32_t, GTRepositoryStashFlag) {
 	GTRepositoryStashFlagDefault = GIT_STASH_DEFAULT,
 	GTRepositoryStashFlagKeepIndex = GIT_STASH_KEEP_INDEX,
 	GTRepositoryStashFlagIncludeUntracked = GIT_STASH_INCLUDE_UNTRACKED,
@@ -22,7 +22,7 @@ typedef NS_OPTIONS(NSInteger, GTRepositoryStashFlag) {
 /// Flags for -applyStashAtIndex:flags:error: and
 /// -popStashAtIndex:flags:error.
 /// Those can be ORed together. See git_stash_apply_flags for additional information.
-typedef NS_OPTIONS(NSInteger, GTRepositoryStashApplyFlag) {
+typedef NS_OPTIONS(uint32_t, GTRepositoryStashApplyFlag) {
 	GTRepositoryStashApplyFlagDefault = GIT_STASH_APPLY_DEFAULT,
 	GTRepositoryStashApplyFlagReinstateIndex = GIT_STASH_APPLY_REINSTATE_INDEX,
 };
