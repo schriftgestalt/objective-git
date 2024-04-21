@@ -70,7 +70,7 @@
 
 #pragma mark API
 
-- (instancetype)initWithEntry:(const git_tree_entry *)theEntry parentTree:(GTTree *)parent error:(NSError **)error {
+- (instancetype)initWithEntry:(const git_tree_entry *)theEntry parentTree:(GTTree *)parent error:(NSError *__autoreleasing *)error {
 	NSParameterAssert(theEntry != NULL);
 	
 	self = [super init];
@@ -89,7 +89,7 @@
 	return self;
 }
 
-+ (instancetype)entryWithEntry:(const git_tree_entry *)theEntry parentTree:(GTTree *)parent error:(NSError **)error {
++ (instancetype)entryWithEntry:(const git_tree_entry *)theEntry parentTree:(GTTree *)parent error:(NSError *__autoreleasing *)error {
 	return [[self alloc] initWithEntry:theEntry parentTree:parent error:error];
 }
 
@@ -120,10 +120,10 @@
 }
 
 - (GTRepository *)repository {
-    return self.tree.repository;
+	return self.tree.repository;
 }
 
-- (GTObject *)GTObject:(NSError **)error {
+- (GTObject *)GTObject:(NSError *__autoreleasing *)error {
 	return [GTObject objectWithTreeEntry:self error:error];
 }
 
@@ -132,21 +132,21 @@
 
 @implementation GTObject (GTTreeEntry)
 
-+ (instancetype)objectWithTreeEntry:(GTTreeEntry *)treeEntry error:(NSError **)error {
-    return [[self alloc] initWithTreeEntry:treeEntry error:error];
++ (instancetype)objectWithTreeEntry:(GTTreeEntry *)treeEntry error:(NSError *__autoreleasing *)error {
+	return [[self alloc] initWithTreeEntry:treeEntry error:error];
 }
 
-- (instancetype)initWithTreeEntry:(GTTreeEntry *)treeEntry error:(NSError **)error {
-    git_object *obj;
-    int gitError = git_tree_entry_to_object(&obj, treeEntry.repository.git_repository, treeEntry.git_tree_entry);
-    if (gitError < GIT_OK) {
-        if (error != NULL) {
-            *error = [NSError git_errorFor:gitError description:@"Failed to get object for tree entry."];
-        }
-        return nil;
-    }
-    
-    return [self initWithObj:obj inRepository:treeEntry.repository];
+- (instancetype)initWithTreeEntry:(GTTreeEntry *)treeEntry error:(NSError *__autoreleasing *)error {
+	git_object *obj;
+	int gitError = git_tree_entry_to_object(&obj, treeEntry.repository.git_repository, treeEntry.git_tree_entry);
+	if (gitError < GIT_OK) {
+		if (error != NULL) {
+			*error = [NSError git_errorFor:gitError description:@"Failed to get object for tree entry."];
+		}
+		return nil;
+	}
+
+	return [self initWithObj:obj inRepository:treeEntry.repository];
 }
 
 @end

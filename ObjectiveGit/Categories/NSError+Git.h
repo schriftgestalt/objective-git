@@ -54,8 +54,7 @@ extern NSString * const GTGitErrorOID;
 ///
 /// code   - The error code returned from libgit2.
 /// desc   - The description to use in the created NSError. This may be nil.
-/// reason - A format string to use for the created NSError's failure reason.
-///          This may be nil.
+/// reason - A format string to use for the created NSError's failure reason. This may be nil.
 /// ...    - Format arguments to insert into `reason`.
 ///
 /// Returns a non-nil NSError.

@@ -6,27 +6,28 @@
 #import "NSError+Git.h"
 
 #import "git2/errors.h"
+#import "git2/deprecated.h"
 
 @implementation NSData (Git)
 
 + (NSData *)git_dataWithOid:(git_oid *)oid {
-    return [NSData dataWithBytes:oid length:sizeof(git_oid)];
+	return [NSData dataWithBytes:oid length:sizeof(git_oid)];
 }
 
-- (BOOL)git_getOid:(git_oid *)oid error:(NSError **)error {
-    if ([self length] != sizeof(git_oid)) {
-        if (error != NULL) {
-            *error = [NSError errorWithDomain:GTGitErrorDomain 
-                                         code:GIT_ERROR_INVALID
-                                     userInfo:
-                      [NSDictionary dictionaryWithObject:@"can't extract oid from data of incorrect length" 
-                                                  forKey:NSLocalizedDescriptionKey]];
-        }
-        return NO;
-    }
-    
-    [self getBytes:oid length:sizeof(git_oid)];
-    return YES;
+- (BOOL)git_getOid:(git_oid *)oid error:(NSError *__autoreleasing *)error {
+	if ([self length] != sizeof(git_oid)) {
+		if (error != NULL) {
+			*error = [NSError errorWithDomain:GTGitErrorDomain 
+										 code:GIT_ERROR_INVALID
+									 userInfo:@{
+				NSLocalizedDescriptionKey: @"can't extract oid from data of incorrect length"
+			}];
+		}
+		return NO;
+	}
+	
+	[self getBytes:oid length:sizeof(git_oid)];
+	return YES;
 }
 
 + (instancetype)git_dataWithBuffer:(git_buf *)buffer {
@@ -37,7 +38,7 @@
 	// Ensure that the buffer is actually allocated dynamically, not pointing to
 	// some data which may disappear.
 	if (git_buf_grow(buffer, 0) != GIT_OK) return nil;
-	
+
 	NSData *data = [self dataWithBytesNoCopy:buffer->ptr length:buffer->size freeWhenDone:YES];
 	*buffer = (git_buf)GIT_BUF_INIT_CONST(0, NULL);
 

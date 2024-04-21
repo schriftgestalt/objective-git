@@ -65,7 +65,7 @@
 	return [NSData git_dataWithBuffer:&output];
 }
 
-- (NSData *)applyToPath:(NSString *)relativePath inRepository:(GTRepository *)repository error:(NSError **)error {
+- (NSData *)applyToPath:(NSString *)relativePath inRepository:(GTRepository *)repository error:(NSError *__autoreleasing *)error {
 	NSParameterAssert(relativePath != nil);
 	NSParameterAssert(repository != nil);
 
@@ -84,7 +84,7 @@
 	return [NSData git_dataWithBuffer:&output];
 }
 
-- (NSData *)applyToBlob:(GTBlob *)blob error:(NSError **)error {
+- (NSData *)applyToBlob:(GTBlob *)blob error:(NSError *__autoreleasing *)error {
 	NSParameterAssert(blob != nil);
 
 	git_buf output = GIT_BUF_INIT_CONST(0, NULL);

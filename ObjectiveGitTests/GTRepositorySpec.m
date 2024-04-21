@@ -79,11 +79,11 @@ describe(@"+cloneFromURL:toWorkingDirectory:options:error:transferProgressBlock:
 		transferProgressCalled = NO;
 		checkoutProgressCalled = NO;
 		transferProgressBlock = ^(const git_transfer_progress *progress, BOOL *stop) {
-            transferProgressCalled = YES;
-        };
+			transferProgressCalled = YES;
+		};
 		checkoutProgressBlock = ^(NSString *path, NSUInteger completedSteps, NSUInteger totalSteps) {
-            checkoutProgressCalled = YES;
-        };
+			checkoutProgressCalled = YES;
+		};
 
 		workdirURL = [self.tempDirectoryFileURL URLByAppendingPathComponent:@"temp-repo"];
 	});
@@ -224,7 +224,7 @@ describe(@"-headReferenceWithError:", ^{
 		expect(head).to(beNil());
 		expect(error).notTo(beNil());
 		expect(error.domain).to(equal(GTGitErrorDomain));
-        expect(@(error.code)).to(equal(@(GIT_EUNBORNBRANCH)));
+		expect(@(error.code)).to(equal(@(GIT_EUNBORNBRANCH)));
 	});
 });
 
@@ -267,8 +267,8 @@ describe(@"-contentsOfDiffWithAncestor:ourSide:theirSide:error:", ^{
 		expect(mainData).notTo(beNil());
 
 		NSString *mainString = [[NSString alloc] initWithData:mainData encoding:NSUTF8StringEncoding];
-		NSData *masterData = [[mainString stringByReplacingOccurrencesOfString:@"return" withString:@"//The meaning of life is 41\n    return"] dataUsingEncoding:NSUTF8StringEncoding];
-		NSData *otherData = [[mainString stringByReplacingOccurrencesOfString:@"return" withString:@"//The meaning of life is 42\n    return"] dataUsingEncoding:NSUTF8StringEncoding];
+		NSData *masterData = [[mainString stringByReplacingOccurrencesOfString:@"return" withString:@"//The meaning of life is 41\n	return"] dataUsingEncoding:NSUTF8StringEncoding];
+		NSData *otherData = [[mainString stringByReplacingOccurrencesOfString:@"return" withString:@"//The meaning of life is 42\n	return"] dataUsingEncoding:NSUTF8StringEncoding];
 
 		expect(@([[NSFileManager defaultManager] createFileAtPath:mainURL.path contents:masterData attributes:nil])).to(beTruthy());
 
@@ -297,7 +297,7 @@ describe(@"-contentsOfDiffWithAncestor:ourSide:theirSide:error:", ^{
 		[conflictIndex enumerateConflictedFilesWithError:NULL usingBlock:^(GTIndexEntry * _Nonnull ancestor, GTIndexEntry * _Nonnull ours, GTIndexEntry * _Nonnull theirs, BOOL * _Nonnull stop) {
 
 			NSString *conflictString = [repository contentsOfDiffWithAncestor:ancestor ourSide:ours theirSide:theirs error:NULL];
-			expect(conflictString).to(equal(@"//\n//  main.m\n//  Test\n//\n//  Created by Joe Ricioppo on 9/28/10.\n//  Copyright 2010 __MyCompanyName__. All rights reserved.\n//\n\n#import <Cocoa/Cocoa.h>\n\nint main(int argc, char *argv[])\n{\n<<<<<<< file.txt\n    //The meaning of life is 42\n=======\n    //The meaning of life is 41\n>>>>>>> file.txt\n    return NSApplicationMain(argc,  (const char **) argv);\n}\n123456789\n123456789\n123456789\n123456789!blah!\n"));
+			expect(conflictString).to(equal(@"//\n//  main.m\n//  Test\n//\n//  Created by Joe Ricioppo on 9/28/10.\n//  Copyright 2010 __MyCompanyName__. All rights reserved.\n//\n\n#import <Cocoa/Cocoa.h>\n\nint main(int argc, char *argv[])\n{\n<<<<<<< file.txt\n	//The meaning of life is 42\n=======\n	//The meaning of life is 41\n>>>>>>> file.txt\n	return NSApplicationMain(argc,  (const char **) argv);\n}\n123456789\n123456789\n123456789\n123456789!blah!\n"));
 		}];
 	});
 });
@@ -429,7 +429,7 @@ describe(@"move head", ^{
 		repository = self.testAppFixtureRepository;
 	});
 
-	//- (BOOL)moveHEADToReference:(GTReference *)reference error:(NSError **)error;
+	//- (BOOL)moveHEADToReference:(GTReference *)reference error:(NSError *__autoreleasing *)error;
 	it(@"should move to reference", ^{
 		NSError *error = nil;
 		GTReference *originalHead = [repository headReferenceWithError:NULL];
@@ -449,7 +449,7 @@ describe(@"move head", ^{
 		expect(head.targetOID.SHA).to(equal(targetReference.targetOID.SHA));
 	});
 
-	//- (BOOL)moveHEADToCommit:(GTCommit *)commit error:(NSError **)error;
+	//- (BOOL)moveHEADToCommit:(GTCommit *)commit error:(NSError *__autoreleasing *)error;
 	it(@"should move to commit", ^{
 		NSError *error = nil;
 		GTReference *originalHead = [repository headReferenceWithError:NULL];

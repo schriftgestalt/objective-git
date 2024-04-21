@@ -106,7 +106,7 @@ static NSString * const FixturesErrorDomain = @"com.objectivegit.Fixtures";
 	return [self.repositoryFixturesPath stringByAppendingPathComponent:repositoryName];
 }
 
-- (BOOL)unzipFromArchiveAtPath:(NSString *)zipPath intoDirectory:(NSString *)destinationPath error:(NSError **)error {
+- (BOOL)unzipFromArchiveAtPath:(NSString *)zipPath intoDirectory:(NSString *)destinationPath error:(NSError *__autoreleasing *)error {
 	BOOL success = [SSZipArchive unzipFileAtPath:zipPath toDestination:destinationPath overwrite:YES password:nil error:error];
 
 	if (!success) {

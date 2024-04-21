@@ -27,31 +27,35 @@
 //  THE SOFTWARE.
 //
 
-#import "NSString+Git.h"
-#import "NSError+Git.h"
 #import "GTOID.h"
+#import "NSError+Git.h"
+#import "NSString+Git.h"
 
 @implementation NSString (Git)
 
 - (BOOL)git_isHexString {
-    // Verify that self only has hexadecimal digits
-    for (NSUInteger i = 0; i < [self length]; ++i) {
-        unichar character = [self characterAtIndex:i];
-        if (isxdigit(character) == NO) { return NO; }
-    }
-    return YES;
+	// Verify that self only has hexadecimal digits
+	for (NSUInteger i = 0; i < [self length]; ++i) {
+		unichar character = [self characterAtIndex:i];
+		if (isxdigit(character) == NO) {
+			return NO;
+		}
+	}
+	return YES;
 }
 
 - (NSString *)git_shortUniqueShaString {
-	if ([self git_isHexString] == NO) { return nil; }
-    
+	if ([self git_isHexString] == NO) {
+		return nil;
+	}
+
 	// Seven characters matches the short form of git on the command line
 	// todo: Vicent wrote something to do this officially: consider using it instead
 	static const NSUInteger magicUniqueLength = 7;
-    if ([self length] < magicUniqueLength) {
-        return nil;
-    }
-        
+	if ([self length] < magicUniqueLength) {
+		return nil;
+	}
+
 	return [self substringToIndex:magicUniqueLength];
 }
 

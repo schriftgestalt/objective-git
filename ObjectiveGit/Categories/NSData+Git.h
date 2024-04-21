@@ -2,20 +2,20 @@
 //  NSData+Git.h
 //
 
-#import <Foundation/Foundation.h>
 #import "git2/buffer.h"
 #import "git2/oid.h"
+#import <Foundation/Foundation.h>
 
 @interface NSData (Git)
 
 + (NSData *)git_dataWithOid:(git_oid *)oid;
-- (BOOL)git_getOid:(git_oid *)oid error:(NSError **)error;
+- (BOOL)git_getOid:(git_oid *)oid error:(NSError *__autoreleasing *)error;
 
 /// Creates an NSData object that will take ownership of a libgit2 buffer.
 ///
 /// buffer - A buffer of data to wrap in NSData, which will be copied if
-///          necessary. This method will replace the buffer's content with
-///          a NULL pointer on success. This argument must not be NULL.
+/// necessary. This method will replace the buffer's content with
+/// a NULL pointer on success. This argument must not be NULL.
 ///
 /// Returns the wrapped data, or nil if memory allocation fails.
 + (instancetype)git_dataWithBuffer:(git_buf *)buffer;
